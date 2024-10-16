@@ -7,7 +7,7 @@ const port = 3000;
 
 
 // Configurando a pasta 'public' para arquivos estáticos (CSS, imagens, etc.)
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Configurando o EJS como motor de templates
 app.set("view engine", "ejs");
