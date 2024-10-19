@@ -67,9 +67,18 @@ body {
     background-color: #e2d8ce !important;
 }
 
+.amz-bg-cards {
+    background-color: #F7EDE2 !important;
+}
+
 .amz-vh {
     width: 100%;
     height: 80vh;
+}
+
+.amz-vh-news {
+    width: 100%;
+    height: 40vh;
 }
 
 .vr {
@@ -114,52 +123,56 @@ body {
     padding: 0;
     position: relative;
     width: 30px;
-  }
-  
-  .icon-bar {
+}
+
+.icon-bar {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: #32A071; /* Cor das barras do menu */
+    background-color: #32A071;
+    /* Cor das barras do menu */
     margin: 5px 0;
-    transition: all 0.4s ease; /* Animação suave */
-  }
-  
-  .navbar-toggler.collapsed .top-bar {
+    transition: all 0.4s ease;
+    /* Animação suave */
+}
+
+.navbar-toggler.collapsed .top-bar {
     transform: rotate(0deg) translate(0, 0);
-  }
-  
-  .navbar-toggler.collapsed .middle-bar {
+}
+
+.navbar-toggler.collapsed .middle-bar {
     opacity: 1;
-  }
-  
-  .navbar-toggler.collapsed .bottom-bar {
+}
+
+.navbar-toggler.collapsed .bottom-bar {
     transform: rotate(0deg) translate(0, 0);
-  }
-  
-  /* Efeito de transição para o "X" */
-  .navbar-toggler:not(.collapsed) .top-bar {
+}
+
+/* Efeito de transição para o "X" */
+.navbar-toggler:not(.collapsed) .top-bar {
     transform: rotate(45deg) translate(6px, 6px);
-  }
-  
-  .navbar-toggler:not(.collapsed) .middle-bar {
+}
+
+.navbar-toggler:not(.collapsed) .middle-bar {
     opacity: 0;
-  }
-  
-  .navbar-toggler:not(.collapsed) .bottom-bar {
+}
+
+.navbar-toggler:not(.collapsed) .bottom-bar {
     transform: rotate(-45deg) translate(5px, -5px);
-  }
-  
-  .navbar-toggler:focus{
+}
+
+.navbar-toggler:focus {
     box-shadow: none;
-  }
+}
 
 .amz-product-img {
-    gap: 10px; /* Espaçamento entre as imagens */
+    gap: 10px;
+    /* Espaçamento entre as imagens */
 }
 
 .amz-product-img img {
-    max-width: 100px; /* Largura fixa para as imagens na horizontal */
+    max-width: 100px;
+    /* Largura fixa para as imagens na horizontal */
     object-fit: cover;
 }
 
@@ -179,7 +192,8 @@ body {
 
 #heroVidPosition {
     position: relative;
-    height: 80vh; /* A altura do Hero será o tamanho da tela */
+    height: 80vh;
+    /* A altura do Hero será o tamanho da tela */
     overflow: hidden;
 }
 
@@ -187,19 +201,22 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-   /* O vídeo fica no fundo, atrás da sobreposição */
+    /* O vídeo fica no fundo, atrás da sobreposição */
 }
 
 .overlay {
-    background-color: rgba(50, 160, 113, 0.9) ; /* Verde com 50% de opacidade */
+    background-color: rgba(50, 160, 113, 0.9);
+    /* Verde com 50% de opacidade */
     top: 0;
     left: 0;
-    z-index: 0; /* A sobreposição fica acima do vídeo, mas abaixo do texto */
+    z-index: 0;
+    /* A sobreposição fica acima do vídeo, mas abaixo do texto */
 }
 
 #heroLogo {
     position: relative;
-    z-index: 1; /* O conteúdo fica sobre a sobreposição e o vídeo */
+    z-index: 1;
+    /* O conteúdo fica sobre a sobreposição e o vídeo */
 }
 
 .copy-link {
@@ -320,12 +337,84 @@ body {
     grid-row: 2 / 3;
 }
 
+/* Bento Grid com 3 colunas de tamanho igual */
+.bento-grid-news {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Três colunas de tamanho fixo */
+    gap: 0 20px;
+    /* Remove o gap vertical e mantém o horizontal */
+    padding: 40px 0px;
+}
+
+/* Estilos do card */
+.bento-grid-news .post-card {
+    background-color: #f8f9fa;
+    border-radius: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+    padding: 15px;
+    margin-bottom: 20px;
+    /* Define o espaçamento entre os cards */
+    /* Remove o controle de altura automática */
+}
+
+/* Imagem */
+.bento-grid-news .post-card .post-image {
+    width: 100%;
+    border-radius: 18px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Conteúdo */
+.bento-grid-news .post-card .post-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+
+.post-card .post-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.post-card .post-excerpt {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+.post-card .read-more {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    align-self: flex-start;
+    /* Mantém o botão de leitura alinhado à esquerda */
+}
+
+/* Hover Effect */
+.bento-grid-news .post-card:hover {
+    transform: scale(1.05);
+}
+
 
 
 
 @media (max-width: 768px) {
     .amz-product-img img {
-        max-width: 100%; /* Deixa as imagens ocuparem toda a largura no mobile */
+        max-width: 100%;
+        /* Deixa as imagens ocuparem toda a largura no mobile */
+    }
+
+    .bento-grid-news {
+        grid-template-columns: repeat(1, 1fr);
+
     }
 
     .h1-light {
@@ -335,5 +424,5 @@ body {
     .h1-black {
         font-size: 40px !important;
     }
-    
+
 }

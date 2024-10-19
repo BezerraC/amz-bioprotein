@@ -11,6 +11,11 @@ router.get("/", (req, res) => {
   });
 });
 
+// Rota para a página "Notícias"
+router.get("/news", (req, res) => {
+  res.render("news", { title: "Notícias" });
+});
+
 // Rota para a página "Sobre"
 router.get("/about", (req, res) => {
   res.render("about", { title: "About Us" });

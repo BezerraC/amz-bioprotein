@@ -67,6 +67,27 @@ gsap.from("#contact", {
   ease: "power3.out",
 });
 
+// Animando a Hero News Section
+gsap.from("#heroNews", {
+  duration: 1,
+  opacity: 0,
+  y: 50,
+  ease: "power3.out",
+});
+
+// Animando a Grid News Section
+gsap.from("#newsGrid", {
+  scrollTrigger: {
+    trigger: "#newsGrid",
+    start: "top 80%",
+    toggleActions: "play none none none",
+  },
+  duration: 1,
+  opacity: 0,
+  y: 100,
+  ease: "power3.out",
+});
+
   const contactForm = document.getElementById("contactForm");
   const statusMessage = document.getElementById("statusMessage");
 
