@@ -327,4 +327,13 @@ body {
     .amz-product-img img {
         max-width: 100%; /* Deixa as imagens ocuparem toda a largura no mobile */
     }
+
+    .h1-light {
+        font-size: 36px !important;
+    }
+
+    .h1-black {
+        font-size: 40px !important;
+    }
+    
 }
