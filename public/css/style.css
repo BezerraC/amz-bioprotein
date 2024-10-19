@@ -21,6 +21,12 @@ body {
     font-size: 50px !important;
 }
 
+.h1-error {
+    font-family: 'Neris', sans-serif;
+    font-weight: 900;
+    font-size: 90px !important;
+}
+
 .h1-feat {
     font-family: 'Neris', sans-serif;
     font-weight: 900;
